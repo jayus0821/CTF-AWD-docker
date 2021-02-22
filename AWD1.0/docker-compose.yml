@@ -1,0 +1,51 @@
+version: "3"
+services:
+    team1_1:
+        image: "pwn1"
+        build: ./b1
+        ports:
+            - "10011:8888"
+            - "20011:22"
+    team1_2:
+        image: "web1"
+        build: ./b2
+        ports:
+            - "10012:80"
+            - "20012:22"
+    team1_3:
+        image: "web2"
+        build: ./b3
+        ports:
+            - "10013:80"
+            - "20013:22"
+    team1_4:
+        image: "web3"
+        build: ./b4
+        ports:
+            - "10014:80"
+            - "20014:22"
+
+    team2_1:
+        image: "pwn1"
+        build: ./b1
+        ports:
+            - "10021:8888"
+            - "20021:22"
+    team2_2:
+        image: "web1"
+        build: ./b2
+        ports:
+            - "10022:80"
+            - "20022:22"
+    team2_3:
+        image: "web2"
+        build: ./b3
+        ports:
+            - "10023:80"
+            - "20023:22"
+    team2_4:
+        image: "web3"
+        build: ./b4
+        ports:
+            - "10024:80"
+            - "20024:22"

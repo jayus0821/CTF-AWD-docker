@@ -1,32 +1,20 @@
-第一次办线上AWD
+# 20190511_awd_docker
 
-使用的是Cardinal环境
+## 说明
 
-https://github.com/vidar-team/Cardinal/releases/tag/v0.7.3
+2019 年 5 月 11 日防灾科技学院 “应急挑战杯” 大学生网络安全邀请赛 AWD 靶机题目。
 
-题目使用的是:https://github.com/glzjin/20190511_awd_docker/
+- 1号靶机为 PWN。
+- 2号靶机为 Nginx + Python(Flask) 题。
+- 3号靶机为 Apache + PHP(ThinkPHP5) 题。
+- 4号靶机为 Nginx + PHP 题。
 
-因为比较老了，原github上的docker文件直接运行会出问题
+## 使用方法
 
-修改了挺多地方，现在可以跑起来了
-
-./Cardinal
-
-启动好靶机，然后访问http://x.x.x.x:8888/manager
-
-配置好靶机就可以了
-
-
-当前靶机的配置为：
 ```
-team1:
-pwn1: 10011  ssh:20011 ctf/123456qaz   root/e99root
-web1: 10012  ssh:20012 ctf/123456wsx   root/e99root
-web2: 10013  ssh:20013 ctf/123456edc   root/e99root
-web3: 10014  ssh:20014 ctf/123456rfv   root/e99root
-team2:
-pwn1: 10021  ssh:20021 ctf/123456qaz   root/e99root
-web1: 10022  ssh:20022 ctf/123456wsx   root/e99root
-web2: 10023  ssh:20023 ctf/123456edc   root/e99root
-web3: 10024  ssh:20024 ctf/123456rfv   root/e99root
+docker-compose up -d --build
 ```
+
+即可创建四个容器，默认对外暴露服务端口和 SSH 端口。
+
+SSH 默认用户名：glzjin 密码：123456
